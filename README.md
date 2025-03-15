@@ -1,58 +1,70 @@
 # House Price Prediction
 
-## Overview
-This project aims to predict house prices based on various features using machine learning techniques. It involves data preprocessing, exploratory data analysis, feature scaling, model training, and optimization using Ridge and Lasso regression.
+## 📌 Overview
+This project aims to predict house prices using various machine learning techniques. It involves data preprocessing, exploratory data analysis (EDA), feature engineering, and model optimization using **Linear Regression, Ridge Regression, and Lasso Regression**.
 
-## Dataset
-The dataset contains multiple features related to house pricing, such as area, number of bedrooms, furnishing status, and more. It is preprocessed to handle categorical variables and scaled for better model performance.
+## 🗂 Dataset
+The dataset used for this project is `Housing.csv`, containing various features related to real estate properties.
 
-## Implementation Steps
-1. **Data Preprocessing**
-   - Load the dataset
-   - Handle missing values (if any)
-   - Encode categorical variables
-   - Feature scaling
+### **Features in the Dataset:**
+- **Price**: Dependent variable (Target)
+- **Area**: Size of the property
+- **Bedrooms, Bathrooms, Stories**: Structural details of the house
+- **Mainroad, Guestroom, Basement, Hotwaterheating, Airconditioning, Parking, Prefarea, Furnishingstatus**: Additional features
 
-2. **Exploratory Data Analysis (EDA)**
-   - Summary statistics
-   - Correlation matrix visualization
-   - Distribution of features using histograms
+## 🛠 Tech Stack
+- **Programming Language**: Python 🐍
+- **Libraries Used**: `pandas`, `matplotlib`, `seaborn`, `sklearn`
 
-3. **Model Training**
-   - Split the dataset into training and testing sets
-   - Train a Linear Regression model
-   - Evaluate using R² score
+## 📊 Exploratory Data Analysis (EDA)
+- **Descriptive statistics** (`df.describe()`, `df.info()`, `df.isna().sum()`)
+- **Correlation Analysis** using a heatmap
+- **Distribution Analysis** using histograms
 
-4. **Model Optimization**
-   - Use Ridge and Lasso regression with hyperparameter tuning (GridSearchCV)
-   - Compare models based on performance metrics
+## 🔄 Data Preprocessing
+- **Encoding categorical variables** using `LabelEncoder`
+- **Feature Scaling** using `StandardScaler`
+- **Splitting dataset** into training and test sets
 
-## Key Takeaways
-- Ridge Regression (L2 regularization) and Lasso Regression (L1 regularization) help optimize models by reducing overfitting.
-- GridSearchCV helps find the best hyperparameters for improved accuracy.
-- Feature scaling enhances the performance of machine learning models.
+## 🤖 Model Training & Evaluation
+### **Linear Regression**
+- Trained using `LinearRegression()`
+- Evaluated using **R² Score**
 
-## Results
-- The best alpha values for Ridge and Lasso regression were determined using cross-validation.
-- Final model comparison based on R² scores provides insights into the best approach for house price prediction.
+### **Regularization Techniques**
+- **Ridge Regression (L2 Regularization)**
+- **Lasso Regression (L1 Regularization)**
+- **Hyperparameter Tuning using GridSearchCV**
+- **Cross-validation with `cv=5`**
 
-## Repository
-[GitHub Repository](https://github.com/RNNivash/House-Price-Prediction.git)
+## 📈 Results
+- **Best Alpha Values** for Ridge and Lasso found using `GridSearchCV`
+- **Comparison of R² Scores** to select the best model
+- **Understanding the effect of L1 & L2 regularization on feature selection and model performance**
 
-## Requirements
-Install the necessary dependencies using:
-```bash
-pip install pandas numpy scikit-learn matplotlib seaborn
-```
+## 🏁 How to Run
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/RNNivash/House-Price-Prediction.git
+   ```
+2. Navigate to the project folder:
+   ```bash
+   cd house-price-prediction
+   ```
+3. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+4. Run the Jupyter Notebook or Python script:
+   ```bash
+   jupyter notebook
+   ```
 
-## Run the Project
-To execute the project, run the Python script:
-```bash
-python house_price_prediction.py
-```
+## 🏆 Conclusion
+- **Ridge vs. Lasso:** Ridge shrinks coefficients but retains all features, while Lasso performs feature selection.
+- **Hyperparameter tuning improves model performance significantly.**
+- **Choosing the best model depends on R² scores and interpretability requirements.**
 
-## Contact
-For any queries, feel free to reach out:
-- LinkedIn: [Nivash R N](https://www.linkedin.com/in/nivash-r-n/)
-- Email: hello.nivashinsights@gmail.com
+---
+**🔗 Connect with me on [LinkedIn](https://www.linkedin.com/in/nivash-r-n/)**
 
